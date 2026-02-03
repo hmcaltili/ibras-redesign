@@ -24,7 +24,9 @@ const products = [
         description: "Yüksek performanslı motorlar için güçlendirilmiş turbo şarj hortumları.",
         code: "TUR-2026-02",
         oem: "14460BB30A",
-        has3d: true
+        has3d: true,
+        image: "/images/products/14460BB30A.jpg",
+        embedUrl: "https://sketchfab.com/models/22a9b05aa9c14ce6bf97abf1772a2960/embed?autospin=1&autostart=1&preload=1&transparent=1&ui_hint=0"
     },
     {
         id: 3,
@@ -32,7 +34,10 @@ const products = [
         category: "Yakıt Sistemi",
         description: "Benzin ve dizel yakıtlar için sızdırmazlık garantili transfer hortumları.",
         code: "FUL-2026-03",
-        oem: "1574.Q5"
+        oem: "1574.Q5",
+        has3d: true,
+        image: "/images/products/1574.Q5.jpg",
+        embedUrl: "https://sketchfab.com/models/584f4d435f2f452d94d035276761509c/embed?autospin=1&autostart=1&preload=1&transparent=1&ui_hint=0"
     },
     {
         id: 4,
@@ -242,7 +247,7 @@ export default function AftermarketProducts() {
                                             <Package className="w-16 h-16 text-gray-600 group-hover:scale-110 transition-transform duration-500" />
                                         </>
                                     )}
-                                    <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                                    <div className="hidden lg:block absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
                                         <span className="text-xs font-medium text-gray-300">{product.title}</span>
                                     </div>
                                     {/* 3D Model Icon */}
@@ -255,7 +260,7 @@ export default function AftermarketProducts() {
                                             className="absolute top-4 right-4 z-10 bg-black/60 backdrop-blur-md p-2 rounded-lg border border-white/20 hover:border-[#E30613] hover:bg-black/80 transition-all duration-300 group/icon flex items-center justify-center cursor-pointer"
                                         >
                                             <Box className="w-5 h-5 text-white group-hover/icon:text-[#E30613] transition-colors duration-300" />
-                                            <span className="max-w-0 overflow-hidden group-hover:max-w-[60px] ml-0 group-hover:ml-2 text-white group-hover/icon:text-[#E30613] text-xs font-bold whitespace-nowrap transition-all duration-300 opacity-0 group-hover:opacity-100">
+                                            <span className="max-w-[60px] lg:max-w-0 overflow-hidden ml-2 lg:ml-0 group-hover:ml-2 lg:group-hover:ml-2 text-white group-hover/icon:text-[#E30613] text-xs font-bold whitespace-nowrap transition-all duration-300 opacity-100 lg:opacity-0 group-hover:opacity-100 lg:group-hover:opacity-100 lg:group-hover:max-w-[60px]">
                                                 3D Gör
                                             </span>
                                         </div>
